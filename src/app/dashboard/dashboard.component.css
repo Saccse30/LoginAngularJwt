@@ -1,0 +1,68 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  background: #1A1E23;
+  color: white;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  padding-top: 20PX;
+  padding-left: 5ch;
+}
+
+
+/* Container for navigation */
+.nav-container {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* Navigation list */
+.nav-container ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* List items */
+.nav-container ul li {
+  margin-right: 40px;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.nav-container ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-container ul li:hover {
+  opacity: 0.7;
+}
+
+.nav-container ul li.active {
+  opacity: 1;
+}
+
+/* Links */
+.nav-container ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+/* Animated line */
+.line {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #FF1847;
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,149 @@
+/* Background and container */
+:host {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#141e30, #243b55);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-box {
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+  border-radius: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Override Angular Material input styles for transparency */
+.user-box.mat-form-field {
+  margin-bottom: 30px;
+}
+
+.user-box .mat-form-field-flex {
+  background: transparent !important;
+}
+
+.user-box.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent !important;
+}
+
+.user-box input.mat-input-element {
+  color: white !important;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+}
+
+.user-box.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #03e9f4 !important;
+}
+
+.mat-form-field-label {
+  color: white !important;
+}
+
+/* Animated button */
+.animated-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.animated-btn:disabled {
+  color: rgba(3, 233, 244, 0.5);
+  cursor: default;
+}
+
+.animated-btn:hover:not(:disabled) {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.animated-btn span {
+  position: absolute;
+  display: block;
+}
+
+.animated-btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+.animated-btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% { top: -100%; }
+  50%, 100% { top: 100%; }
+}
+
+.animated-btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% { right: -100%; }
+  50%, 100% { right: 100%; }
+}
+
+.animated-btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% { bottom: -100%; }
+  50%, 100% { bottom: 100%; }
+}
